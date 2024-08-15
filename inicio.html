@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Cloud</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #007BFF 50%, #ececec 50%);
+            margin: 0;
+            
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background-color:   #ffffff;
+            position: fixed; /* Barra de navegación fija en la parte superior */
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            max-width: 8rem; /* Ajusta el tamaño máximo del logo */
+        }
+
+        .nav-list {
+            list-style-type: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: #1c1c1c;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-list li a:hover {
+            color: #007BFF; /* Cambio de color al pasar el ratón */
+        }
+
+        .services {
+            display: flex;
+            gap: 1rem;
+            margin-top: 5rem; /* Espacio para evitar que los servicios se solapen con la barra de navegación */
+        }
+
+        .service {
+            position: relative;
+            display: block;
+            text-decoration: none;
+            color: white;
+            width: 300px; /* Ancho fijo de los contenedores de servicios */
+            height: 400px; /* Alto fijo de los contenedores de servicios */
+            overflow: hidden;
+        }
+
+        .service img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .service:hover img {
+            transform: scale(1.05); /* Escalado al pasar el ratón */
+        }
+
+        .service-title {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        @media screen and (max-width: 550px) {
+            .nav-list {
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 1rem;
+            }
+
+            .nav-list li a {
+                font-size: 1.25rem; /* Tamaño de fuente más grande para dispositivos móviles */
+            }
+
+            header {
+                padding: 1rem;
+            }
+        }
+    </style>
+    <header>
+        <img class="logo" src="WhatsApp_Image_2021-11-26_at_15.15.49-removebg-preview.png" alt="Logo">
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+            <ul class="nav-list">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="#">Quiénes somos</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Qué hacemos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="services">
+        <a href="productos.html" class="service">
+            <img src="4...jpg" alt="Productos">
+            <div class="service-title">PRODUCTOS</div>
+        </a>
+        <a href="archivos.html" class="service">
+            <img src="2..jpg" alt="Archivos">
+            <div class="service-title">ARCHIVOS</div>
+        </a>
+        <a href="factura.html" class="service">
+            <img src="3..avif" alt="Facturas">
+            <div class="service-title">FACTURAS</div>
+        </a>
+        <a href="contactos.html" class="service">
+            <img src="refiera-concepto-amigo-manos-dibujos-animados-sosteniendo-telefono-lista-contactos-amigos-banner-estrategia-marketing-referencia-plantilla-pagina-destino-interfaz-usuario-web-aplicacion-movil-poster-pancarta-follet.avif" alt="Contacto">
+            <div class="service-title">CONTACTOS</div>
+        </a>
+    </div>
+    
+    <script src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturación</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #007BFF 50%, #ececec 50%);
+            padding-top: 150px; /* Espacio para la barra de navegación fija */
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background-color: #ffffff;
+            position: fixed; /* Barra de navegación fija en la parte superior */
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        .logo img {
+            max-width: 8rem; /* Ajusta el tamaño máximo del logo */
+        }
+
+        .nav-list {
+            list-style-type: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: #1c1c1c;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-list li a:hover {
+            color: #007BFF; /* Cambio de color al pasar el ratón */
+        }
+
+        .billing-form {
+            max-width: 600px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            border-top: 4px solid #007BFF; /* Línea superior de color */
+        }
+
+        .billing-form h2 {
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #007BFF;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .form-group button {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsivo */
+        @media (max-width: 600px) {
+            .billing-form {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            .nav-list {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="WhatsApp_Image_2021-11-26_at_15.15.49-removebg-preview.png" alt="Logo">
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="archivos.html">Archivos</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="billing-form">
+        <h2>Formulario de Facturación</h2>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Nombre Completo</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Dirección</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="product">Producto/Servicio</label>
+                <select id="product" name="product" required>
+                    <option value="lentes_contacto">Lentes de Contacto</option>
+                    <option value="gafas_sol">Gafas de Sol</option>
+                    <option value="solucion_salina">Solución Salina</option>
+                    <!-- Añadir más productos/servicios según sea necesario -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Cantidad</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comentarios Adicionales</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Otro contenido de la página -->
+
+</body>
+</html>

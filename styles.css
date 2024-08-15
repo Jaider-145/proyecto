@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.services {
+    display: flex;
+    gap: 1rem;
+}
+
+.service {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.service img {
+    width: 85%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.service:hover img {
+    transform: scale(1.05);
+}
+
+.service-title {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}

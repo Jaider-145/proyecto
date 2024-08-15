@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos de Optometría</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #007BFF 50%, #ececec 50%);
+            padding-top: 80px; /* Espacio para la barra de navegación fija */
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            background-color: #ffffff;
+            position: fixed; /* Barra de navegación fija en la parte superior */
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo img {
+            max-width: 8rem; /* Ajusta el tamaño máximo del logo */
+        }
+
+        .nav-list { 
+            list-style-type: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: #0b0b0b;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-list li a:hover {
+            color: #007BFF; /* Cambio de color al pasar el ratón */
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap:5rem;
+            padding: 2rem;
+            margin-top: 7rem; /* Espacio para evitar que los productos se solapen con la barra de navegación */
+        }
+
+        .product {
+            position: relative;
+            display: block;
+            text-decoration: none;
+            color: black;
+            background-color: #fff; /* Fondo blanco */
+            padding: 1rem;
+            width: 300px; /* Ancho fijo de los contenedores de productos */
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            transition: transform 0.3s ease;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px; /* Bordes redondeados de la imagen */
+        }
+
+        .product:hover {
+            transform: scale(1.05); /* Escalado al pasar el ratón */
+        }
+
+        .product-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+            text-align: center;
+        }
+
+        .product-description {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .product-price {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #007BFF;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="WhatsApp_Image_2021-11-26_at_15.15.49-removebg-preview.png" alt="Logo">
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="archivos.html">Archivos</a></li>
+                <li><a href="factura.html">Facturas</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="products">
+        <a href="#" class="product">
+            <img src="lentescontacto.jpg" alt="Producto 1">
+            <div class="product-title">Lentes de Contacto</div>
+            <div class="product-description">Lentes de contacto blandos para uso diario.</div>
+            <div class="product-price">$20.00</div>
+        </a>
+        <a href="#" class="product">
+            <img src="gafassss.jpg" alt="Producto 2">
+            <div class="product-title">Gafas de Sol</div>
+            <div class="product-description">Gafas de sol con protección UV.</div>
+            <div class="product-price">$35.00</div>
+        </a>
+        <a href="#" class="product">
+            <img src="360ml_100ml_saline-990.png" alt="Producto 3">
+            <div class="product-title">Solución Salina</div>
+            <div class="product-description">Solución salina para el cuidado de lentes de contacto.</div>
+            <div class="product-price">$10.00</div>
+        </a>
+    </a>
+    <a href="#" class="product">
+        <img src="360ml_100ml_saline-990.png" alt="Producto 3">
+        <div class="product-title">Solución Salina</div>
+        <div class="product-description">Solución salina para el cuidado de lentes de contacto.</div>
+        <div class="product-price">$10.00</div>
+    </a>
+     </a>
+        <a href="#" class="product">
+            <img src="360ml_100ml_saline-990.png" alt="Producto 3">
+            <div class="product-title">Solución Salina</div>
+            <div class="product-description">Solución salina para el cuidado de lentes de contacto.</div>
+            <div class="product-price">$10.00</div>
+        </a>
+        <a href="#" class="product">
+            <img src="360ml_100ml_saline-990.png" alt="Producto 3">
+            <div class="product-title">Solución Salina</div>
+            <div class="product-description">Solución salina para el cuidado de lentes de contacto.</div>
+            <div class="product-price">$10.00</div>
+        </a>
+        <!-- Añadir más productos según sea necesario -->
+    </section>
+
+    <!-- Otro contenido de la página -->
+
+</body>
+</html>
